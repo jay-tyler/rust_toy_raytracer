@@ -1,5 +1,4 @@
 use std::ops::{Add, Sub, Div, Mul};
-//use std::cmp::PartialEq;
 
 #[derive(Copy, Clone, Debug, PartialEq)]
 pub struct ThreeVector(pub f64, pub f64, pub f64);

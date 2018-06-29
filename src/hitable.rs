@@ -2,6 +2,7 @@ use vectors::ThreeVector;
 use rays::Ray;
 use std::vec;
 use sphere::Sphere;
+use std::f64;
 
 #[derive(Copy, Clone)]
 pub struct HitRecord {
@@ -25,9 +26,9 @@ impl Hitable for HitableList {
            t_min: f64, t_max: f64,
            rec: &mut HitRecord) -> bool {
         let mut temp_rec = HitRecord{
-            t: 0_f64, //MAX,
-            p: ThreeVector(0.,0.,0.), //TODO: OK?
-            normal: ThreeVector(0.,0.,0.), //TODO: OK?
+            t: f64::MAX,
+            p: ThreeVector(f64::NAN,f64::NAN,f64::NAN), //TODO: OK?
+            normal: ThreeVector(f64::NAN,f64::NAN,f64::NAN), //TODO: OK?
         };
         let mut hit_anything = false;
         let mut closest_so_far = t_max;

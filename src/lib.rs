@@ -2,6 +2,7 @@ pub mod rays;
 pub mod vectors;
 pub mod hitable;
 pub mod sphere;
+pub mod camera;
 
 #[cfg(test)]
 mod test_vectors {
